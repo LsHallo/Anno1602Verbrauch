@@ -1,0 +1,48 @@
+Pioniere
+    Prozent:    0         ; Welcher Erfüllungsprozentsatz
+    Maxwohn:    2         ; Nicht mehr als 2 Einwohner
+    Steuer:     1.4       ; Welche Einnahmen je Einwohner
+
+
+Siedler
+    Prozent:    47
+    Maxwohn:    6
+    Steuer:     1.6
+    Bedürfnisse:
+        STOFFE, 0.6       ; ORG/SUN  1.0 / 0.4
+        ALKOHOL, 0.5      ; ORG/SUN  0.8 / 0.4
+
+
+Bürger
+    Prozent:    71
+    Maxwohn:    15
+    Steuer:     2.1
+    Bedürfnisse:
+        STOFFE, 0.7       ; ORG/SUN  1.0 / 0.5
+        ALKOHOL, 0.6      ; ORG/SUN  0.8 / 0.5
+        TABAKWAREN, 0.5   ; ORG/SUN  0.5 / 0.4
+        GEWUERZE, 0.5     ; ORG/SUN  0.5 / 0.4
+
+
+Kaufleute
+    Prozent:    78
+    Maxwohn:    25
+    Steuer:     2.4
+    Bedürfnisse:
+        STOFFE, 0.8      ; ORG/SUN  1.0 / 0.6
+        ALKOHOL, 0.7     ; ORG/SUN  1.0 / 0.7
+        KAKAO, 0.7       ; ORG/SUN  0.6 / 0.7
+        TABAKWAREN, 0.6  ; ORG/SUN  0.6 / 0.5
+        GEWUERZE, 0.6    ; ORG/SUN  0.6 / 0.5
+
+
+Aristokraten
+    Prozent:    84
+    Maxwohn:    40
+    Steuer:     2.6
+        ALKOHOL, 0.8      ; ORG/SUN  1.2 / 0.8
+        KAKAO, 0.6        ; ORG/SUN  0.7 / 0.6
+        TABAKWAREN, 0.6   ; ORG/SUN  0.7 / 0.6
+        GEWUERZE, 0.6     ; ORG/SUN  0.7 / 0.6
+        KLEIDUNG, 0.5     ; ORG/SUN  0.6 / 0.5
+        SCHMUCK, 0.2      ; ORG/SUN  0.2 / 0.2

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>Anno 1602 Verbrauchsrechner 2.0</title>
+        <meta charset="UTF-8">
+        <script src="/jquery.min.js"></script>
+        <script src="/consumption.js"></script>
+        <script src="/production.js"></script>
+        <script src="/verbrauch.js"></script>
+    </head>
+    <body>
+        <label><input type="text" id="houses" size="3"> Häuser</label>
+        <table>
+            <tr>
+                <td>
+                    <span id="pioniere">0</span> Pioniere
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span id="siedler">0</span> Siedler
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span id="buerger">0</span> Bürger
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span id="kaufleute">0</span> Kaufleute
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span id="aristokraten">0</span> Aristokraten
+                </td>
+            </tr>
+        </table>
+        <label>
+            Daten zur Berechnung:
+            <select id="dataSelect">
+                <option value="gameData">Spieldaten</option>
+                <option value="experimentData" selected>Beobachtete Daten</option>
+            </select>
+        </label>
+        <h3>Verbrauch (t/min)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <td>Stufe</td>
+                    <td>Nahrung</td>
+                    <td>Stoffe</td>
+                    <td>Alkohol</td>
+                    <td>Tabakwaren</td>
+                    <td>Gewürze</td>
+                    <td>Kakao</td>
+                    <td>Kleidung</td>
+                    <td>Schmuck</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pioniere</td>
+                    <td><span id="pNahrung"></span></td>
+                    <td><span id="pStoffe"></span></td>
+                    <td><span id="pAlkohol"></span></td>
+                    <td><span id="pTabakwaren"></span></td>
+                    <td><span id="pGewürze"></span></td>
+                    <td><span id="pKakao"></span></td>
+                    <td><span id="pKleidung"></span></td>
+                    <td><span id="pSchmuck"></span></td>
+                </tr>
+                <tr>
+                    <td>Siedler</td>
+                    <td><span id="sNahrung"></span></td>
+                    <td><span id="sStoffe"></span></td>
+                    <td><span id="sAlkohol"></span></td>
+                    <td><span id="sTabakwaren"></span></td>
+                    <td><span id="sGewürze"></span></td>
+                    <td><span id="sKakao"></span></td>
+                    <td><span id="sKleidung"></span></td>
+                    <td><span id="sSchmuck"></span></td>
+                </tr>
+                <tr>
+                    <td>Bürger</td>
+                    <td><span id="bNahrung"></span></td>
+                    <td><span id="bStoffe"></span></td>
+                    <td><span id="bAlkohol"></span></td>
+                    <td><span id="bTabakwaren"></span></td>
+                    <td><span id="bGewürze"></span></td>
+                    <td><span id="bKakao"></span></td>
+                    <td><span id="bKleidung"></span></td>
+                    <td><span id="bSchmuck"></span></td>
+                </tr>
+                <tr>
+                    <td>Kaufleute</td>
+                    <td><span id="kNahrung"></span></td>
+                    <td><span id="kStoffe"></span></td>
+                    <td><span id="kAlkohol"></span></td>
+                    <td><span id="kTabakwaren"></span></td>
+                    <td><span id="kGewürze"></span></td>
+                    <td><span id="kKakao"></span></td>
+                    <td><span id="kKleidung"></span></td>
+                    <td><span id="kSchmuck"></span></td>
+                </tr>
+                <tr>
+                    <td>Aristokraten</td>
+                    <td><span id="aNahrung"></span></td>
+                    <td><span id="aStoffe"></span></td>
+                    <td><span id="aAlkohol"></span></td>
+                    <td><span id="aTabakwaren"></span></td>
+                    <td><span id="aGewürze"></span></td>
+                    <td><span id="aKakao"></span></td>
+                    <td><span id="aKleidung"></span></td>
+                    <td><span id="aSchmuck"></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

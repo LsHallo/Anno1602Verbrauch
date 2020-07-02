@@ -1,0 +1,1125 @@
+  ;---Fischerei---;
+    @Nummer:    +1
+    BASE =      Nummer
+    Id:         IDSTRAND+74
+    Gfx:        GFXPIER+4
+    Baugfx:     BGFXHAFEN+4
+    Kind:       STRANDHAUS
+    KreuzBase:  BASE
+    Posoffs:    HIGHMEER
+    Highflg:    1
+    Size:       1, 1
+    Rotate:     1
+    Ruinenr:		RUINE_HOLZ
+    NoShotFlg:  1
+    Objekt:     HAUS_PRODTYP
+      Kind:       FISCHEREI
+      Ware:       NAHRUNG
+      Rohstoff:   FISCHE
+      Kosten:     KOST_WENIG, KOST_WENIG_SLP
+      Figurnr:    FISCHER
+      Figuranz:   1
+      Maxnorohst:	8
+      Arbeiter:		1
+			Rohmenge:   3
+      Radius:     5
+			Interval:   28
+      Maxlager:   4
+    EndObj;
+		Objekt:			HAUS_BAUKOST
+      Werkzeug:   3
+      Holz:       5
+      Money:      100
+		EndObj;
+
+;=============HANDWERK-ZWISCHENPRODUKTE==============;
+
+  ;---Getreidemühle---;
+    @Nummer:    +1
+    Id:         IDHANDW+0
+    Gfx:        GFXMUEHL
+    Baugfx:     BGFXFARM+68
+   	Bausample:  WAV_MUEHLE
+    Ruinenr:		RUINE_HOLZ
+	  Kind:       GEBAEUDE
+    Size:       2, 2
+    Rotate:     4
+    NoShotFlg:  1
+    Einhoffs:		2.8
+		Tuerflg:    1
+    AnimAdd:    16
+    AnimAnz:    16
+    AnimTime:   90
+    Objekt:     HAUS_PRODTYP
+      Kind:       HANDWERK
+      Ware:       MEHL
+      Rohstoff:   KORN
+      Kosten:     KOST_WENIG, KOST_WENIG_SLP
+    	Bauinfra:		INFRA_STUFE_2D
+      Figurnr:    TRAEGER
+      Figuranz:   1
+      Arbeiter:		2
+      Rohmenge:   2
+      Radius:     10
+      Anicontflg:	1
+			Interval:   18
+      Maxlager:   6
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   3
+      Holz:       6
+      Money:      100
+    EndObj;
+
+  ;---Wassermühle---;
+    @Nummer:    +1
+    Id:         IDHANDW+8
+    Gfx:        GFXMUEHL+256
+    Baugfx:     BGFXFARM+76
+   	Bausample:  WAV_MUEHLE
+    Ruinenr:		RUINE_HOLZ
+	  Kind:       WMUEHLE
+    Size:       2, 2
+    Rotate:     4
+    NoShotFlg:  1
+    Einhoffs:		2.2
+    Grundflg:   1
+		Tuerflg:    1
+    AnimAdd:    16
+    AnimAnz:    6
+    AnimTime:   130
+    Objekt:     HAUS_PRODTYP
+      Kind:       HANDWERK
+      Ware:       MEHL
+      Rohstoff:   KORN
+      Kosten:     KOST_WENIG, KOST_WENIG_SLP
+    	Bauinfra:		INFRA_STUFE_2D
+      Figurnr:    TRAEGER
+      Figuranz:   1
+      Arbeiter:		2
+      Rohmenge:   2
+      Radius:     10
+      Anicontflg:	1
+			Interval:   18
+      Maxlager:   6
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   3
+      Holz:       6
+      Money:      100
+    EndObj;
+
+  ;---Erz-Schmelze---;
+    @Nummer:    +1
+    Id:         IDHANDW+20
+    Gfx:        GFXHANDW+144
+    Baugfx:     BGFXHANDW+36
+    Kind:       GEBAEUDE
+    Size:       2, 2
+    Rotate:     4
+    NoShotFlg:  1
+    Einhoffs:		1.8
+		AnimAdd:    16
+    AnimAnz:    5
+    AnimTime:   90
+    Tuerflg:    1
+    Objekt:     HAUS_PRODTYP
+      Kind:       HANDWERK
+      Ware:       EISEN
+      Rohstoff:   EISENERZ
+      Workstoff:  HOLZ
+      Kosten:     KOST_ERHOEHT, KOST_ERHOEHT_SLP
+      Figurnr:    PACKESEL
+      Figuranz:   1
+	    Rauchfignr:	RAUCHSCHMELZ
+      Arbeiter:		3
+      Rohmenge:   1
+      Workmenge:  1
+      Radius:     10
+			Bauinfra:		INFRA_STUFE_2F
+      Interval:   29
+      Maxlager:   5
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   3
+      Holz:       1
+      Ziegel:     4
+      Money:      200
+    EndObj;
+
+;===============HANDWERK-ENDPRODUKTE================;
+
+  ;---Bäckereien---;
+    @Nummer:    +1
+    Id:         IDHANDW+2
+    Gfx:        GFXHANDW+0
+    Baugfx:     BGFXHANDW+0
+		Bausample:	WAV_BAECKER
+    Kind:       GEBAEUDE
+    Size:       2, 2
+    Rotate:     4
+    NoShotFlg:  1
+    Einhoffs:		2.0
+    Tuerflg:    1
+    Objekt:     HAUS_PRODTYP
+      Kind:       HANDWERK
+      Ware:       NAHRUNG
+      Rohstoff:   MEHL
+      Kosten:     KOST_WENIG, KOST_WENIG_SLP
+    	Bauinfra:		INFRA_STUFE_2D
+      Figurnr:    TRAEGER
+      Figuranz:   1
+      Rauchfignr:	RAUCHBAECK
+      Arbeiter:		2
+			Rohmenge:   2
+      Radius:     15
+      Interval:   19
+      Maxlager:   4
+      NoMoreWork: 1
+      NoLagVoll:  1
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   2
+      Holz:       6
+      Money:      150
+    EndObj;
+
+  ;---Fleischer---;
+    @Nummer:    +1
+    Id:         IDHANDW+10
+    Gfx:        GFXHANDW+80
+    Baugfx:     BGFXHANDW+20
+		Bausample:	WAV_FLEISCHER
+    Kind:       GEBAEUDE
+    Size:       2, 2
+    Rotate:     4
+    NoShotFlg:  1
+    Einhoffs:   1.75
+    Tuerflg:    1
+    Objekt:     HAUS_PRODTYP
+      Kind:       HANDWERK
+      Ware:       NAHRUNG
+      Rohstoff:   FLEISCH
+      Kosten:     KOST_WENIG, KOST_WENIG_SLP
+			Bauinfra:		INFRA_STUFE_1A
+      Figurnr:    FLEISCHER
+      Figuranz:   1
+      Arbeiter:		2
+      Rohmenge:   2
+      Radius:     10
+      Interval:   25
+      Maxlager:   4
+      NoMoreWork: 1
+      NoLagVoll:  1
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   3
+      Holz:       6
+      Money:      150
+    EndObj;
+
+  ;---Schneider---;
+    @Nummer:    +1
+    Id:         IDHANDW+4
+    Gfx:        GFXHANDW+16
+    Baugfx:     BGFXHANDW+4
+    Kind:       GEBAEUDE
+    Size:       2, 2
+    Rotate:     4
+    Tuerflg:    1
+    NoShotFlg:  1
+    Objekt:     HAUS_PRODTYP
+      Kind:       HANDWERK
+      Ware:       KLEIDUNG
+      Rohstoff:   STOFFE
+      Kosten:     KOST_BEDARF_1, KOST_BEDARF_1_SLP
+      Figurnr:    TRAEGER
+      Figuranz:   1
+      Arbeiter:		3
+      Rohmenge:   1
+      Radius:     15
+			Bauinfra:		INFRA_STUFE_3C
+      Interval:   30
+      Maxlager:   4
+      NoMoreWork: 1
+      NoLagVoll:  1
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   3
+      Holz:       6
+      Ziegel:     2
+      Money:      150
+    EndObj;
+
+  ;---Webstube---;
+    @Nummer:    +1
+    KREUZBASE = Nummer
+    Id:         IDHANDW+6
+    Gfx:        GFXHANDW+32
+    Baugfx:     BGFXHANDW+8
+    Kind:       GEBAEUDE
+    KreuzBase:  KREUZBASE
+    Ausbauflg:	1
+    Size:       2, 2
+    Rotate:     4
+    Tuerflg:    1
+    NoShotFlg:  1
+    Objekt:     HAUS_PRODTYP
+      Kind:       HANDWERK
+      Ware:       STOFFE
+      Rohstoff:   WOLLE
+      Kosten:     KOST_BEDARF_1, KOST_BEDARF_1_SLP
+      Figurnr:    TRAEGER
+      Figuranz:   1
+      Arbeiter:		2
+      Rohmenge:   2
+      Radius:     15
+      Interval:   30
+      Maxlager:   4
+      NoMoreWork: 1
+      NoLagVoll:  1
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   3
+      Holz:       6
+      Ziegel:     0
+      Money:      200
+    EndObj;
+
+  ;---Weberei---;
+    @Nummer:    +1
+    Id:         IDHANDW+30
+    Gfx:        GFXHANDW+48
+    Baugfx:     BGFXHANDW+12
+    Kind:       GEBAEUDE
+    KreuzBase:  KREUZBASE
+    Ausbauflg:	1
+    Size:       2, 2
+    Rotate:     4
+    Tuerflg:    1
+    NoShotFlg:  1
+    Objekt:     HAUS_PRODTYP
+      Kind:       HANDWERK
+      Ware:       STOFFE
+      Rohstoff:   WOLLE
+      Kosten:     KOST_BEDARF_3, KOST_BEDARF_3_SLP
+      Figurnr:    TRAEGER
+      Figuranz:   1
+      Arbeiter:		4
+      Rohmenge:   2
+      Radius:     15
+			Bauinfra:		INFRA_STUFE_3C
+      Interval:   17
+      Maxlager:   4
+      NoMoreWork: 1
+      NoLagVoll:  1
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   4
+      Holz:       3
+      Ziegel:     7
+      Money:      200
+    EndObj;
+
+  ;---Rumbrennerei---;
+    @Nummer:    +1
+    Id:         IDHANDW+18
+    Gfx:        GFXHANDW+64
+    Baugfx:     BGFXHANDW+16
+		Bausample:	WAV_RUMBRENNER
+    Kind:       GEBAEUDE
+    Size:       2, 2
+    Rotate:     4
+    NoShotFlg:  1
+    Tuerflg:    1
+    Objekt:     HAUS_PRODTYP
+      Kind:       HANDWERK
+      Ware:       ALKOHOL
+      Rohstoff:   ZUCKER
+      Kosten:     KOST_BEDARF_2, KOST_BEDARF_2_SLP
+      Figurnr:    TRAEGER
+      Figuranz:   1
+ 	    Rauchfignr:	RAUCHBRENNER
+      Arbeiter:		3
+      Rohmenge:   2
+      Radius:     12
+			Bauinfra:		INFRA_STUFE_2C
+      Interval:   23
+      Maxlager:   4
+      NoMoreWork: 1
+      NoLagVoll:  1
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   3
+      Holz:       2
+      Ziegel:     5
+      Money:      200
+    EndObj;
+
+  ;---Tabakwaren---;
+    @Nummer:    +1
+    Id:         IDHANDW+24
+    Gfx:        GFXHANDW+96
+    Baugfx:     BGFXHANDW+24
+    Kind:       GEBAEUDE
+    Size:       2, 2
+    Rotate:     4
+    NoShotFlg:  1
+    Tuerflg:    1
+    Objekt:     HAUS_PRODTYP
+      Kind:       HANDWERK
+      Ware:       TABAKWAREN
+      Rohstoff:   TABAK
+      Kosten:     KOST_BEDARF_3, KOST_BEDARF_3_SLP
+      Figurnr:    TRAEGER
+      Figuranz:   1
+      Arbeiter:		2
+      Rohmenge:   2
+      Radius:     12
+			Bauinfra:		INFRA_STUFE_2C
+      Interval:   30
+      Maxlager:   4
+      NoMoreWork: 1
+      NoLagVoll:  1
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   3
+      Holz:       2
+      Ziegel:     5
+      Money:      200
+    EndObj;
+
+  ;---Goldschmied---;
+    @Nummer:    +1
+    Id:         IDHANDW+32
+    Gfx:        GFXHANDW+112
+    Baugfx:     BGFXHANDW+28
+    Kind:       GEBAEUDE
+    Size:       2, 2
+    Rotate:     4
+    NoShotFlg:  1
+    Tuerflg:    1
+    Objekt:     HAUS_PRODTYP
+      Kind:       HANDWERK
+      Ware:       SCHMUCK
+      Rohstoff:   GOLD
+      Kosten:     KOST_SPEZIAL, KOST_SPEZIAL_SLP
+      Figurnr:    TRAEGER
+      Figuranz:   1
+      Rauchfignr:	RAUCHGOLD
+      Arbeiter:		3
+      Rohmenge:   0.5
+      Radius:     12
+			Bauinfra:		INFRA_STUFE_4A
+      Interval:   50
+      Maxlager:   4
+      NoMoreWork: 1
+      NoLagVoll:  1
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   7
+      Holz:       2
+      Ziegel:     10
+      Money:      1500
+    EndObj;
+
+  ;---Werkzeug-Schmiede---;
+    @Nummer:    +1
+    Id:         IDHANDW+14
+    Gfx:        GFXHANDW+224
+    Baugfx:     BGFXHANDW+40
+		Bausample:	WAV_SCHWERTBAU
+    Kind:       GEBAEUDE
+    Size:       2, 2
+    Rotate:     4
+    NoShotFlg:  1
+		Einhoffs:		1.7
+    AnimAdd:    16
+    AnimAnz:    5
+    AnimTime:   90
+    Tuerflg:    1
+    Objekt:     HAUS_PRODTYP
+      Kind:       HANDWERK
+      Ware:       WERKZEUG
+      Rohstoff:   EISEN
+      Kosten:     KOST_ERHOEHT, KOST_ERHOEHT_SLP
+      Figurnr:    TRAEGER
+      Figuranz:   1
+ 	    Rauchfignr:	RAUCHWERKZEUG
+      Arbeiter:		3
+      Rohmenge:   0.5
+      Radius:     15
+			Bauinfra:		INFRA_STUFE_2E
+      Interval:   35
+      Maxlager:   4
+      NoMoreWork: 1
+      MakLagFlg:  1
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   3
+      Holz:       2
+      Ziegel:     5
+      Money:      150
+    EndObj;
+
+  ;---Musketen-Bauer---;
+    @Nummer:    +1
+    Id:         IDHANDW+28
+    Gfx:        GFXHANDW+304
+    Baugfx:     BGFXHANDW+44
+		Bausample:	WAV_SCHWERTBAU
+    Kind:       GEBAEUDE
+    Size:       2, 2
+    Rotate:     4
+    NoShotFlg:  1
+    AnimAdd:    16
+    AnimAnz:    5
+    AnimTime:   90
+    Tuerflg:    1
+    Objekt:     HAUS_PRODTYP
+      Kind:       HANDWERK
+      Ware:       MUSKETEN
+      Rohstoff:   EISEN
+      Workstoff:  HOLZ
+      Kosten:     KOST_WAFFE_2, KOST_WAFFE_2_SLP
+      Figurnr:    TRAEGER
+      Figuranz:   1
+ 	    Rauchfignr:	RAUCHMUSKET
+      Arbeiter:		4
+      Rohmenge:   1
+			Workmenge:	0.5
+      Radius:     15
+			Bauinfra:		INFRA_MUSKETE
+      Interval:   50
+      Maxlager:   4
+      NoMoreWork: 1
+      MakLagFlg:  1
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   9
+      Holz:       4
+      Ziegel:     10
+      Money:      600
+    EndObj;
+
+  ;---Kanonen-Gießerei---;
+    @Nummer:    +1
+    Id:         IDHANDW+26
+    Gfx:        GFXHANDW+384
+    Baugfx:     BGFXHANDW+48
+		Bausample:	WAV_GIESSEREI
+    Kind:       GEBAEUDE
+    Size:       3, 3
+    Rotate:     9
+    NoShotFlg:  1
+		Einhoffs:		3.0
+    AnimAdd:    36
+    AnimAnz:    5
+    AnimTime:   90
+    Tuerflg:    1
+    Objekt:     HAUS_PRODTYP
+      Kind:       HANDWERK
+      Ware:       KANONEN
+      Rohstoff:   EISEN
+      Workstoff:  HOLZ
+      Kosten:     KOST_WAFFE_3, KOST_WAFFE_3_SLP
+      Figurnr:    TRAEGER
+      Figuranz:   1
+ 	    Rauchfignr:	RAUCHKANONEN
+      Arbeiter:		5
+	    Rohmenge:   1
+			Workmenge:	1
+      Radius:     15
+			Bauinfra:		INFRA_KANON
+      Interval:   50
+      Maxlager:   4
+      NoMoreWork: 1
+      MakLagFlg:  1
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   6
+      Holz:       5
+      Ziegel:     15
+      Money:      750
+    EndObj;
+
+  ;---Schwert-Bauer---;
+    @Nummer:    +1
+    Id:         IDHANDW+16
+    Gfx:        GFXHANDW+564
+    Baugfx:     BGFXHANDW+52
+		Bausample:	WAV_SCHWERTBAU
+    Kind:       GEBAEUDE
+    Size:       2, 2
+    Rotate:     4
+    NoShotFlg:  1
+    AnimAdd:    16
+    AnimAnz:    5
+    AnimTime:   90
+    Tuerflg:    1
+    Objekt:     HAUS_PRODTYP
+      Kind:       HANDWERK
+      Ware:       SCHWERTER
+      Rohstoff:   EISEN
+      Kosten:     KOST_WAFFE_1, KOST_WAFFE_1_SLP
+      Figurnr:    TRAEGER
+      Figuranz:   1
+ 	    Rauchfignr:	RAUCHSCHWERT
+      Arbeiter:		3
+      Rohmenge:   1
+      Radius:     15
+			Bauinfra:		INFRA_BURG_1
+      Interval:   50
+      Maxlager:   4
+      NoMoreWork: 1
+      MakLagFlg:  1
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   5
+      Holz:       4
+      Ziegel:     10
+      Money:      450
+    EndObj;
+
+;=================ROHSTOFFE-BERGBAU==================;
+
+  ;---Steinbruch---;
+    @Nummer:    +1
+    Id:         IDMINE+6
+    Gfx:        GFXMINE+0
+    Baugfx:     BGFXMINE+0
+   	Ruinenr:		RUINE_MINE
+    Maxenergy:  55
+    Kind:       MINE
+    Size:       1, 2
+    Rotate:     2
+    Objekt:     HAUS_PRODTYP
+      Kind:       STEINBRUCH
+      Ware:       STEINE
+			Bauinfra:		INFRA_STUFE_2A
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   6
+      Holz:       2
+      Money:      150
+    EndObj;
+
+  ;---Kleine Erzmine---;
+    @Nummer:    +1
+    BASE =      Nummer
+    Id:         IDMINE+0
+    Gfx:        GFXMINE+8
+    Baugfx:     BGFXMINE+4
+		Bausample:	WAV_MINE
+   	Ruinenr:		RUINE_MINE
+    Kind:       MINE
+    Size:       1, 2
+    Einhoffs:		1.4
+    KreuzBase:  BASE
+    Ausbauflg:	1
+    Maxenergy:  115
+    Rotate:     2
+    AnimAdd:    8
+    AnimAnz:    8
+    AnimTime:   90
+    Objekt:     HAUS_PRODTYP
+      Kind:       BERGWERK
+      Ware:       EISENERZ
+      Kosten:     KOST_ERZBAU, KOST_ERZBAU_SLP
+      Erzbergnr:  ERZBERG_KLEIN
+      Arbeiter:		8
+			Rohmenge:   1
+      Radius:     1
+			Bauinfra:		INFRA_STUFE_2F
+      Interval:   40
+      Maxlager:   5
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   10
+      Holz:       20
+      Ziegel:     5
+      Money:      1000
+    EndObj;
+
+  ;---Grosse Erzmine---;
+    @Nummer:    +1
+    Id:         IDMINE+2
+    Gfx:        GFXMINE+72
+    Baugfx:     BGFXMINE+8
+		Bausample:	WAV_MINE
+   	Ruinenr:		RUINE_MINE
+    Kind:       MINE
+    Size:       1, 2
+    Einhoffs:		1.4
+    KreuzBase:  BASE
+    Ausbauflg:	1
+    Maxenergy:  115
+    Rotate:     2
+    AnimAdd:    8
+    AnimAnz:    8
+    AnimTime:   90
+    Objekt:     HAUS_PRODTYP
+      Kind:       BERGWERK
+      Ware:       EISENERZ
+      Kosten:     KOST_ERZBAU, KOST_ERZBAU_SLP
+      Erzbergnr:  ERZBERG_GROSS
+      Arbeiter:		10
+			Rohmenge:   1
+      Radius:     1
+			Bauinfra:		INFRA_STUFE_3F
+      Interval:   40
+      Maxlager:   5
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   15
+      Holz:       30
+      Ziegel:     7
+      Money:      1800
+    EndObj;
+
+  ;---Goldmine---;
+    @Nummer:    +1
+    Id:         IDMINE+4
+    Gfx:        GFXMINE+136
+    Baugfx:     BGFXMINE+12
+		Bausample:	WAV_MINE
+   	Ruinenr:		RUINE_MINE
+    Kind:       MINE
+    Size:       1, 2
+    Einhoffs:		1.4
+    KreuzBase:  KREUZBASE
+    Ausbauflg:	1
+    Maxenergy:  115
+    Rotate:     2
+    AnimAdd:    8
+    AnimAnz:    8
+    AnimTime:   90
+    Objekt:     HAUS_PRODTYP
+      Kind:       BERGWERK
+      Ware:       GOLD
+      Kosten:     KOST_ERZBAU, KOST_ERZBAU_SLP
+      Erzbergnr:  ERZBERG_KLEIN
+      Arbeiter:		10
+			Rohmenge:   1
+      Radius:     1
+			Bauinfra:		INFRA_STUFE_3B
+      Interval:   80
+      Maxlager:   4
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   10
+      Holz:       20
+      Ziegel:     5
+      Money:      1000
+    EndObj;
+
+;=================HANDWERK-BERGBAU===============;
+
+  ;---Steinmetz---;
+    @Nummer:    +1
+    Id:         IDHANDW+12
+    Gfx:        GFXFARM+64
+    Baugfx:     BGFXFARM+16
+    Kind:       GEBAEUDE
+    Size:       2, 2
+    Rotate:     4
+    Tuerflg:    1
+    NoShotFlg:  1
+    Einhoffs:		1.6
+    AnimAnz:    4
+    AnimAdd:    16
+    AnimTime:   TIMENEVER
+    Objekt:     HAUS_PRODTYP
+      Kind:       PLANTAGE
+  	  Ware:       ZIEGEL
+      Rohstoff:   STEINE
+      Kosten:     KOST_WENIG, KOST_WENIG_SLP
+  		Bauinfra:		INFRA_STUFE_2A
+      Figurnr:    STEINKLOPFER
+      Figuranz:   1
+      Arbeiter:		2
+      Rohmenge:   1
+      Radius:     7
+      Interval:   8
+      Maxlager:   8
+      LagAniFlg:  1
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   5
+      Holz:       5
+      Money:      100
+    EndObj;
+
+;================FARMEN-ANBAU-JAGD================;
+
+  ;---Försterhaus---;
+    @Nummer:    +1
+    BASE =      Nummer
+    Id:         IDFORST+0
+    Gfx:        GFXFARM+0
+    Baugfx:     BGFXFARM+0
+   	Ruinenr:		RUINE_HOLZ
+    Kind:       GEBAEUDE
+    Size:       2, 2
+    Rotate:     4
+    Tuerflg:    1
+    NoShotFlg:  1
+    Einhoffs:		1.65
+    AnimAnz:    4
+    AnimAdd:    16
+    AnimTime:   TIMENEVER
+    Objekt:     HAUS_PRODTYP
+      Kind:       PLANTAGE
+  	  Ware:       HOLZ
+      Rohstoff:   BAUM
+      Kosten:     KOST_WENIG, KOST_WENIG_SLP
+      Figurnr:    HOLZFAELLER
+      Figuranz:   1
+			Maxnorohst: 8
+      Arbeiter:		1
+      Rohmenge:   1
+      Radius:     3
+      Interval:   8
+      Maxlager:   10
+      LagAniFlg:  1
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   2
+      Money:      50
+    EndObj;
+
+  ;---Jagdhuette---;
+    @Nummer:    +1
+    Id:         IDFORST+2
+    Gfx:        GFXLAGER+4
+    Baugfx:     BGFXFARM+72
+		Bausample:	WAV_JAGDHUETTE
+   	Ruinenr:		RUINE_HOLZ
+    Kind:       GEBAEUDE
+    Size:       1, 1
+    Rotate:     1
+    Tuerflg:    1
+    NoShotFlg:  1
+    Objekt:     HAUS_PRODTYP
+      Kind:       JAGDHAUS
+  	  Ware:       NAHRUNG
+      Rohstoff:   WILD
+      Kosten:     KOST_WENIG, KOST_WENIG_SLP
+      Figurnr:    JAEGER
+      Figuranz:   1
+			Maxnorohst: 8
+      Arbeiter:		1
+			Rohmenge:   1
+      Radius:     8
+      Interval:   15
+      Maxlager:   3
+      NoMoreWork: 1
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   2
+      Holz:       2
+      Money:      50
+    EndObj;
+
+  ;---Getreide-Farm---;
+    @Nummer:    +1
+    Id:         IDFARM+2
+    Gfx:        GFXFARM+128
+    Baugfx:     BGFXFARM+32
+		Bausample:	WAV_PLANTAGE
+   	Ruinenr:		RUINE_HOLZ
+    Kind:       GEBAEUDE
+    Size:       2, 2
+    Rotate:     4
+    Tuerflg:    1
+    NoShotFlg:  1
+    Einhoffs:		1.65
+		Objekt:     HAUS_PRODTYP
+      Kind:       PLANTAGE
+  	  Ware:       KORN
+      Rohstoff:   GETREIDE
+      Kosten:     KOST_WENIG, KOST_WENIG_SLP
+  		Bauinfra:		INFRA_STUFE_2D
+      Figurnr:    MAEHER
+      Figuranz:   1
+      Arbeiter:		2
+			Maxnorohst: 6
+      Rohmenge:   1
+      Radius:     1
+      Interval:   8
+      Maxlager:   6
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   2
+      Holz:       5
+      Money:      100
+    EndObj;
+
+  ;---Baumwollplantage---;
+    @Nummer:    +1
+    Id:         IDFARM+4
+    Gfx:        GFXFARM+144
+    Baugfx:     BGFXFARM+36
+		Bausample:	WAV_PLANTAGE
+    Kind:       GEBAEUDE
+    Size:       2, 2
+    Rotate:     4
+    Tuerflg:    1
+    Maxenergy:  40
+    NoShotFlg:  1
+    Einhoffs:		1.75
+    Objekt:     HAUS_PRODTYP
+      Kind:       PLANTAGE
+  	  Ware:       WOLLE
+      Rohstoff:   BAUMWOLLE
+      Figurnr:    PFLUECKER
+      Kosten:     KOST_PLANTAGE_1, KOST_PLANTAGE_1_SLP
+			Maxnorohst: 6
+      Arbeiter:   4
+      Rohmenge:   1
+      Radius:     2
+			Bauinfra:		INFRA_STUFE_3C
+      Interval:   10
+      Maxlager:   9
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   2
+      Holz:       3
+      Ziegel:     6
+      Money:      200
+    EndObj;
+
+  ;---Tabak-Plantage---;
+    @Nummer:    +1
+    Id:         IDFARM+6
+    Gfx:        GFXFARM+192
+    Baugfx:     BGFXFARM+48
+		Bausample:	WAV_PLANTAGE
+    Kind:       GEBAEUDE
+    Size:       2, 2
+    Rotate:     4
+    Tuerflg:    1
+    Maxenergy:  40
+    NoShotFlg:  1
+    Objekt:     HAUS_PRODTYP
+      Kind:       PLANTAGE
+  	  Ware:       TABAK
+      Rohstoff:   TABAKBAUM
+      Kosten:     KOST_PLANTAGE_2, KOST_PLANTAGE_2_SLP
+      Figurnr:    PFLUECKER
+			Maxnorohst: 6
+      Arbeiter:   4
+      Rohmenge:   2
+      Radius:     2
+			Bauinfra:		INFRA_STUFE_2C
+      Interval:   15
+      Maxlager:   6
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   2
+      Holz:       3
+      Ziegel:     8
+      Money:      300
+    EndObj;
+
+  ;---Kakao-Plantage---;
+    @Nummer:    +1
+    Id:         IDFARM+8
+    Gfx:        GFXFARM+208
+    Baugfx:     BGFXFARM+52
+		Bausample:	WAV_PLANTAGE
+    Kind:       GEBAEUDE
+    Size:       2, 2
+    Rotate:     4
+    Tuerflg:    1
+    Maxenergy:  40
+    NoShotFlg:  1
+    Objekt:     HAUS_PRODTYP
+      Kind:       PLANTAGE
+  	  Ware:       KAKAO
+      Rohstoff:   KAKAOBAUM
+      Kosten:     KOST_PLANTAGE_2, KOST_PLANTAGE_2_SLP
+      Figurnr:    PFLUECKER
+			Maxnorohst: 6
+      Arbeiter:   4
+      Rohmenge:   3
+      Radius:     2
+			Bauinfra:		INFRA_STUFE_3C
+      Interval:   15
+      Maxlager:   6
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   2
+      Holz:       3
+      Ziegel:     8
+      Money:      300
+    EndObj;
+
+  ;---Zuckerrohr-Plantage---;
+    @Nummer:    +1
+    Id:         IDFARM+10
+    Gfx:        GFXFARM+224
+    Baugfx:     BGFXFARM+56
+		Bausample:	WAV_PLANTAGE
+    Kind:       GEBAEUDE
+    Size:       2, 2
+    Rotate:     4
+    Tuerflg:    1
+    Maxenergy:  40
+    NoShotFlg:  1
+    Objekt:     HAUS_PRODTYP
+      Kind:       PLANTAGE
+  	  Ware:       ZUCKER
+      Rohstoff:   ZUCKERROHR
+      Kosten:     KOST_PLANTAGE_1, KOST_PLANTAGE_1_SLP
+      Figurnr:    PFLUECKER
+			Maxnorohst: 6
+      Arbeiter:   4
+      Rohmenge:   2
+      Radius:     2
+			Bauinfra:		INFRA_STUFE_2C
+      Interval:   8
+      Maxlager:   6
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   2
+      Holz:       3
+      Ziegel:     8
+      Money:      300
+    EndObj;
+
+  ;---Weinanbau-Plantage---;
+    @Nummer:    +1
+    Id:         IDFARM+16
+    Gfx:        GFXFARM+240
+    Baugfx:     BGFXFARM+60
+		Bausample:	WAV_PLANTAGE
+    Kind:       GEBAEUDE
+    Size:       2, 2
+    Rotate:     4
+    Tuerflg:    1
+    NoShotFlg:  1
+    Objekt:     HAUS_PRODTYP
+      Kind:       PLANTAGE
+  	  Ware:       ALKOHOL
+      Rohstoff:   WEINTRAUBEN
+      Kosten:     KOST_PLANTAGE_2, KOST_PLANTAGE_2_SLP
+      Figurnr:    PFLUECKER
+			Maxnorohst: 6
+      Arbeiter:   4
+      Rohmenge:   4
+      Radius:     2
+			Bauinfra:		INFRA_STUFE_2C
+      Interval:   15
+      Maxlager:   6
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   2
+      Holz:       3
+      Ziegel:     8
+      Money:      300
+    EndObj;
+
+  ;---Gewürze-Plantage---;
+    @Nummer:    +1
+    Id:         IDFARM+0
+    Gfx:        GFXFARM+256
+    Baugfx:     BGFXFARM+64
+		Bausample:	WAV_PLANTAGE
+    Kind:       GEBAEUDE
+    Size:       2, 2
+    Rotate:     4
+    Tuerflg:    1
+    Maxenergy:  40
+    NoShotFlg:  1
+    Objekt:     HAUS_PRODTYP
+      Kind:       PLANTAGE
+  	  Ware:       GEWUERZE
+      Rohstoff:   GEWUERZBAUM
+      Kosten:     KOST_PLANTAGE_2, KOST_PLANTAGE_2_SLP
+      Figurnr:    PFLUECKER
+			Maxnorohst: 6
+      Arbeiter:   4
+      Rohmenge:   3
+      Radius:     2
+			Bauinfra:		INFRA_STUFE_2C
+      Interval:   15
+      Maxlager:   4
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   2
+      Holz:       3
+      Ziegel:     8
+      Money:      300
+    EndObj;
+
+;================FARMEN-TIERHALTUNG==============;
+
+  ;---Rinderfarm---;
+    @Nummer:    +1
+    Id:         IDFARM+12
+    Gfx:        GFXFARM+160
+    Baugfx:     BGFXFARM+40
+		Bausample:	WAV_PLANTAGE
+   	Ruinenr:		RUINE_HOLZ
+    Kind:       GEBAEUDE
+    Size:       2, 2
+    Rotate:     4
+    Tuerflg:    1
+    NoShotFlg:  1
+    Einhoffs:		2.3
+    Objekt:     HAUS_PRODTYP
+      Kind:       WEIDETIER
+  	  Ware:       FLEISCH
+      Rohstoff:   GRAS
+      Kosten:     KOST_WENIG, KOST_WENIG_SLP
+  		Bauinfra:		INFRA_STUFE_1A
+      Figurnr:    RIND
+      Figuranz:   2
+			Maxnorohst: 6
+      Arbeiter:		2
+      Rohmenge:   2
+      Radius:     2
+      Interval:   25
+      Maxlager:   4
+      NoMoreWork: 1
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   1
+      Holz:       4
+      Money:      100
+    EndObj;
+
+  ;---Schaf-Farm---;
+    @Nummer:    +1
+    Id:         IDFARM+14
+    Gfx:        GFXFARM+176
+    Baugfx:     BGFXFARM+44
+		Bausample:	WAV_PLANTAGE
+  	Ruinenr:		RUINE_HOLZ
+	  Kind:       GEBAEUDE
+    Size:       2, 2
+    Rotate:     4
+    Tuerflg:    1
+    NoShotFlg:  1
+    Einhoffs:		1.65
+    Objekt:     HAUS_PRODTYP
+      Kind:       WEIDETIER
+  	  Ware:       WOLLE
+      Rohstoff:   GRAS
+      Kosten:     KOST_WENIG, KOST_WENIG_SLP
+      Figurnr:    SCHAF
+      Figuranz:   3
+			Maxnorohst: 8
+      Arbeiter:		2
+      Rohmenge:   4
+      Radius:     3
+      Interval:   30
+      Maxlager:   8
+    EndObj;
+    Objekt:     HAUS_BAUKOST
+      Werkzeug:   2
+      Holz:       4
+      Ziegel:     0
+      Money:      200
+    EndObj;
